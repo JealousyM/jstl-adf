@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:c="http://java.sun.com/jsp/jstl/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+          xmlns:fmt="http://java.sun.com/jsp/jstl/fmt">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1">
+      <af:form id="f1" usesUpload="true">
+          <c:set var="user" value="Misha"/>
+          <c:set var="summ" value="12345"/>
+          <c:out value="${user} "/>
+          <fmt:formatNumber type="number" maxIntegerDigits="3" value="${summ}"/>
+          <af:outputText value=" Длинна  слова 'Инкапсуляция'= #{fn:length('Инкапсуляция')}" id="aot1"/> 
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>
